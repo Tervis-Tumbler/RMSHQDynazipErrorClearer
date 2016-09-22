@@ -13,7 +13,7 @@ choco install git.install -y -f
 3. Clone the repository
 	A. Open PowerShell as an Administrator
 	B. Run the following:
-Set-Location $env:USERPROFILE+"\Documents\WindowsPowerShell\Modules\RMSHQDynazipErrorClearer"; Git Clone https://github.com/Tervis-Tumbler/RMSHQDynazipErrorClearer
+Set-Location $env:USERPROFILE+"\Documents\WindowsPowerShell\Modules"; Git Clone https://github.com/Tervis-Tumbler/RMSHQDynazipErrorClearer
 	
 4. Create a scheduled task to initiate the program on system startup
 	A. Run the following in PowerShell as an Administrator:
