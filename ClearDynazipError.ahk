@@ -16,14 +16,15 @@ SetBatchLines -1
 #Persistent
 
 
+F4::
 InvokeClickError:
 Loop
 {
     Loop
     {
         CoordMode, Pixel, Window
-        ImageSearch, FoundX, FoundY, -41, -39, 305, 191, *1 %A_ScriptDir%\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png
-        CenterImgSrchCoords("*1 %A_ScriptDir%\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png", FoundX, FoundY)
+        ImageSearch, FoundX, FoundY, -41, -39, 305, 191, *1 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png
+        CenterImgSrchCoords("*1 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png", FoundX, FoundY)
     }
     Until ErrorLevel = 0
     If ErrorLevel = 0
@@ -36,8 +37,8 @@ Loop
         Loop
         {
             CoordMode, Pixel, Window
-            ImageSearch, FoundX, FoundY, -27, -27, 302, 179, %A_ScriptDir%\ImageMatches\RMSHQ DynaZip\Screen_20160912152530.png
-            CenterImgSrchCoords("%A_ScriptDir%\ImageMatches\RMSHQ DynaZip\Screen_20160912152530.png", FoundX, FoundY)
+            ImageSearch, FoundX, FoundY, -27, -27, 302, 179, \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160912152530.png
+            CenterImgSrchCoords("\\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160912152530.png", FoundX, FoundY)
         }
         Until ErrorLevel = 0
         If ErrorLevel = 0
@@ -47,6 +48,7 @@ Loop
             */
             Click, Left, 1
             Sleep, 10
+            Sleep, 5000
         }
     }
 }
