@@ -5,15 +5,14 @@ How to install RMSHQDynazipErrorClearer -
 	B. Run the following:
 iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))
 
-2. Install Git
+2. Install Git from PowerShell
 	A. Open PowerShell as an Administrator
 	B. Run the following:
 choco install git.install -y -f
 
-3. Clone the repository
-	A. Open PowerShell as an Administrator
-	B. Run the following:
-Set-Location $env:USERPROFILE+"\Documents\WindowsPowerShell\Modules"; Git Clone https://github.com/Tervis-Tumbler/RMSHQDynazipErrorClearer
+3. Download
+	A. Download the repository and place it in the following directory, create it if it doesn't exist
+%userprofile%\Documents\WindowsPowerShell\Modules\
 	
 4. Create a scheduled task to initiate the program on system startup
 	A. Run the following in PowerShell as an Administrator:
