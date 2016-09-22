@@ -1,14 +1,9 @@
 ﻿[PMC Code v5.0.5]|F4||0|Window,2,Fast,0,1,Input,-1,-1,1|1|InvokeClickError
 Groups=Start:1
-1|Continue, Continue, FoundX, FoundY, 1|-41, -39, 305, 191, *1 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png|1|0|ImageSearch|UntilFound|Window|||
-2|If Image/Pixel Found||1|0|If_Statement|||||
-3|Left Click|Left, 1, |1|10|Click|||||
-04|[MsgBox]|Found the window!!|1|3|MsgBox|262144||||
-5|Continue, Continue, FoundX, FoundY, 1|-27, -27, 302, 179, \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160912152530.png|1|0|ImageSearch|UntilFound|Window|||
-6|If Image/Pixel Found||1|0|If_Statement|||||
-07|[MsgBox]|Found the OK button|1|3|MsgBox|262144||||
-8|Left Click|Left, 1, |1|10|Click|||||
-9|[Pause]||1|5000|Sleep|||||
-10|[End If]|EndIf|1|0|If_Statement|||||
-11|[End If]|EndIf|1|0|If_Statement|||||
+1|[LoopStart]|LoopStart|0|0|Loop|||||
+2|Continue, Continue, FoundX, FoundY, 1|-41, -39, 305, 191, *1 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png|1|0|ImageSearch|UntilFound|Window|||
+3|If Image/Pixel Found||1|0|If_Statement|||||
+4|[End If]|EndIf|1|0|If_Statement|||||
+5|Shutdown|6|1|0|Shutdown|||||
+6|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
