@@ -9,6 +9,7 @@
     $Settings.ExecutionTimeLimit="PT0S"
     Register-ScheduledTask -TaskName $TaskName -Action $Action -User $User -Trigger $Trigger -Description $Description -Settings $Settings -RunLevel Highest
 }
+
 function Get-RMSHQDynazipErrorClearerUpdate{
     $RepositoryLocal = $env:USERPROFILE+"\Documents\WindowsPowerShell\Modules\RMSHQDynazipErrorClearer"
 
@@ -16,4 +17,16 @@ function Get-RMSHQDynazipErrorClearerUpdate{
         Set-Location $RepositoryLocal
         Git Pull
     }
+}
+
+function New-RMSHQDynazipErrorClearerEventLogSource{
+    $EventSource = "RMSHQDynazipErrorClearer"
+    $EventLog = "Application"
+    if ([System.Diagnostics.EventLog]::SourceExists($EventSource) -eq $false) {
+        [System.Diagnostics.EventLog]::CreateEventSource($EventSource, $EventLog)
+    }
+}
+
+function Write-RMSHQDynazipErrorClearerEvent{
+    Write-EventLog -LogName Application -Source "RMSHQDynazipErrorClearer" -EntryType Information -EventId 1 -Message "$env:COMPUTERNAME+Restart to clear Dynazip error"
 }
