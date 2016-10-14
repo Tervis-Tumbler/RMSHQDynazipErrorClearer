@@ -1,0 +1,1 @@
+Write-EventLog -LogName Application -Source "RMSHQDynazipErrorClearer" -EntryType Information -EventId 1 -Message "$env:COMPUTERNAME+Restart to clear Dynazip error"

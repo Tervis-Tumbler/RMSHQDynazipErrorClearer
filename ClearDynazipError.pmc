@@ -1,9 +1,10 @@
-﻿[PMC Code v5.0.5]|F4||0|Window,2,Fast,0,1,Input,-1,-1,1|1|InvokeClickError
+﻿[PMC Code v5.0.5]|||0|Window,2,Fast,0,1,Input,-1,-1,1|1|InvokeClickError
 Groups=Start:1
 1|[LoopStart]|LoopStart|0|0|Loop|||||
-2|Continue, Continue, FoundX, FoundY, 1|-41, -39, 305, 191, *1 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png|1|0|ImageSearch|UntilFound|Window|||
+2|Continue, Continue, FoundX, FoundY, 1|-41, -39, 305, 191, *20 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png|1|0|ImageSearch|UntilFound|Window|||
 3|If Image/Pixel Found||1|0|If_Statement|||||
-4|[End If]|EndIf|1|0|If_Statement|||||
+4|Run|powershell.exe -command .\Write-RMSHQDynazipErrorClearerEvent.ps1, %userprofile%\Documents\WindowsPowerShell\Modules\RMSHQDynazipErrorClearer|1|0|Run|||||
 5|Shutdown|6|1|0|Shutdown|||||
-6|[LoopEnd]|LoopEnd|1|0|Loop|||||
+6|[End If]|EndIf|1|0|If_Statement|||||
+7|[LoopEnd]|LoopEnd|1|0|Loop|||||
 
