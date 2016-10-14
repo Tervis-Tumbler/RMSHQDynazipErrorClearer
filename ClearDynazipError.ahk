@@ -24,8 +24,7 @@ Loop
         Loop
         {
             CoordMode, Pixel, Window
-            ImageSearch, FoundX, FoundY, -41, -39, 305, 191, *20 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png
-            CenterImgSrchCoords("*20 \\fs1\DisasterRecovery\Source Controlled Items\AutoHotKey\ImageMatches\RMSHQ DynaZip\Screen_20160914134332.png", FoundX, FoundY)
+            ImageSearch, FoundX, FoundY, -41, -39, 305, 191, *20 %A_ScriptDir%\ImageMatches\DynaZipZip.png
         }
         Until ErrorLevel = 0
         If ErrorLevel = 0
@@ -37,15 +36,3 @@ Loop
 }
 Return
 
-
-CenterImgSrchCoords(File, ByRef CoordX, ByRef CoordY)
-{
-	static LoadedPic
-	LastEL := ErrorLevel
-	Gui, Pict:Add, Pic, vLoadedPic, %File%
-	GuiControlGet, LoadedPic, Pict:Pos
-	Gui, Pict:Destroy
-	CoordX += LoadedPicW // 2
-	CoordY += LoadedPicH // 2
-	ErrorLevel := LastEL
-}
